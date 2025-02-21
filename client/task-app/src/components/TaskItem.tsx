@@ -14,6 +14,7 @@ const TaskItem = ({ children, handleDelete }: Props) => {
     }
   }
 
+
   return (
     <div>
       <input 
@@ -21,7 +22,9 @@ const TaskItem = ({ children, handleDelete }: Props) => {
         checked={isChecked}
         onChange={(e) => setIsChecked(e.target.checked)}
       />
-      {children}
+      <span className={isChecked ? "line-through" : ""}>
+        {children}
+      </span>
       <button onClick={handleDeleteButton}>Deletee</button>
     </div>
   )

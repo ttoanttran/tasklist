@@ -15,7 +15,7 @@ const App = () => {
 
   return (
     <div>
-      <h1>To Do List</h1>
+      <h1 className="text-3xl font-bold underline">To Do List</h1>
       <TaskForm handleSubmit={handleAdd}></TaskForm>
       <TaskList things={tasks} handleDelete={handleDelete}></TaskList>
     </div>
