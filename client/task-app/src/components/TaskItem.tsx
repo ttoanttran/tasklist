@@ -15,7 +15,7 @@ const TaskItem = ({ children }: Props) => {
         onChange={(e) => setIsChecked(e.target.checked)}
       />
       {children}
-      <button>Delete</button>
+      <button>Deletee</button>
     </div>
   )
 }
