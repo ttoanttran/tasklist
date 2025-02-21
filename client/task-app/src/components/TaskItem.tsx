@@ -1,11 +1,18 @@
-import { ReactNode, useState } from "react"
+import { ReactNode, useState, MouseEvent } from "react"
 
 interface Props {
-  children: ReactNode
+  children: ReactNode;
+  handleDelete: (item: string) => void
 }
 
-const TaskItem = ({ children }: Props) => {
+const TaskItem = ({ children, handleDelete }: Props) => {
   const [isChecked, setIsChecked] = useState(false)
+
+  const handleDeleteButton = () => {
+    if (typeof children === "string") {
+      handleDelete(children); // Pass the children if it's a string
+    }
+  }
 
   return (
     <div>
@@ -15,7 +22,7 @@ const TaskItem = ({ children }: Props) => {
         onChange={(e) => setIsChecked(e.target.checked)}
       />
       {children}
-      <button>Deletee</button>
+      <button onClick={handleDeleteButton}>Deletee</button>
     </div>
   )
 }

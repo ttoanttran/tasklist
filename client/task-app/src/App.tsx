@@ -9,11 +9,15 @@ const App = () => {
     setTasks(tasks => [...tasks, item]);
   }
 
+  const handleDelete = (item: string) => {
+    setTasks(tasks => tasks.filter(task => task !== item));
+  }
+
   return (
     <div>
       <h1>To Do List</h1>
       <TaskForm handleSubmit={handleAdd}></TaskForm>
-      <TaskList things={tasks}></TaskList>
+      <TaskList things={tasks} handleDelete={handleDelete}></TaskList>
     </div>
   )
 }
