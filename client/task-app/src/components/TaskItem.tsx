@@ -25,7 +25,7 @@ const TaskItem = ({ children, handleDelete }: Props) => {
       <span className={isChecked ? "line-through" : ""}>
         {children}
       </span>
-      <button onClick={handleDeleteButton}>Deletee</button>
+      <button onClick={handleDeleteButton} className="px-4 py-2 bg-red-400">Deletee</button>
     </div>
   )
 }

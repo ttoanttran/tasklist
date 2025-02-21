@@ -1,4 +1,4 @@
-import { useState } from "react";
+
 import TaskItem from "./TaskItem";
 
 interface Props {
@@ -11,8 +11,8 @@ const TaskList = ({ things, handleDelete }: Props) => {
   return (
     <div>
       <ol>
-        {things.map((item, index) => 
-         <li key={index}><TaskItem handleDelete={handleDelete}>{item}</TaskItem></li>
+        {things.map((it, i) => 
+         <li key={i}><TaskItem handleDelete={handleDelete}>{it}</TaskItem></li>
         )}
       </ol>
     </div>
