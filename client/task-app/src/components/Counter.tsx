@@ -5,7 +5,9 @@ const Counter = () => {
   const [count, setCount] = useState(0)
 
   const handleAdd = () => {
-    setCount(count + 1)
+    setCount(prevCount => prevCount + 1);
+    setCount(prevCount => prevCount + 1);
+
   }
 
   const handleMinus = () => {
