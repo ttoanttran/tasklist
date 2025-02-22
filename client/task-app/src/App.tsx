@@ -2,6 +2,7 @@ import { useState } from "react";
 import TaskForm from "./components/TaskForm"
 import TaskList from "./components/TaskList";
 import ColorPicker from "./components/ColorPicker";
+import MyComponent from "./components/MyComponent";
 
 const App = () => {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -16,7 +17,7 @@ const App = () => {
 
   return (
     <div>
-      <ColorPicker></ColorPicker>
+      <MyComponent></MyComponent>
     </div>
   )
 }
