@@ -16,7 +16,7 @@ const MyComponent = () => {
   }
 
   function handleRemoveCar(index: number) {
-    setCars(cars.filter((_, i) => i != index))
+    setCars(cars.filter((_, i) => i !== index))
   }
 
   function handleYearChange(event: React.ChangeEvent<HTMLInputElement>) {
@@ -32,7 +32,7 @@ const MyComponent = () => {
   }
 
   return (
-    <div>
+    <div className="max-w-md mx-auto p-6 bg-white shadow-lg rounded-lg">
       <h2>List of car Objects</h2>
       <ul>
         {cars.map((item, index) => <li key={index} onClick={() => handleRemoveCar(index)}>{`Car: ${item.year} ${item.make} ${item.model}`}</li>)}
