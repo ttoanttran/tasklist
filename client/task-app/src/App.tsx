@@ -3,6 +3,7 @@ import TaskForm from "./components/TaskForm"
 import TaskList from "./components/TaskList";
 import ColorPicker from "./components/ColorPicker";
 import MyComponent from "./components/MyComponent";
+import ComponentA from "./components/ComponentA";
 
 const App = () => {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -17,7 +18,7 @@ const App = () => {
 
   return (
     <div>
-      <MyComponent></MyComponent>
+      <ComponentA></ComponentA>
     </div>
   )
 }
