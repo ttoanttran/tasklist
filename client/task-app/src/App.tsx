@@ -4,6 +4,7 @@ import TaskList from "./components/TaskList";
 import ColorPicker from "./components/ColorPicker";
 import MyComponent from "./components/MyComponent";
 import ComponentA from "./components/ComponentA";
+import StopWatch from "./components/StopWatch";
 
 const App = () => {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -18,7 +19,7 @@ const App = () => {
 
   return (
     <div>
-      <ComponentA></ComponentA>
+      <StopWatch></StopWatch>
     </div>
   )
 }
