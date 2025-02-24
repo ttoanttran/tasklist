@@ -5,6 +5,7 @@ import ColorPicker from "./components/ColorPicker";
 import MyComponent from "./components/MyComponent";
 import ComponentA from "./components/ComponentA";
 import StopWatch from "./components/StopWatch";
+import RefPract from "./components/RefPract";
 
 const App = () => {
   const [tasks, setTasks] = useState<string[]>([]);
@@ -19,7 +20,7 @@ const App = () => {
 
   return (
     <div>
-      <StopWatch></StopWatch>
+      <RefPract></RefPract>
     </div>
   )
 }
