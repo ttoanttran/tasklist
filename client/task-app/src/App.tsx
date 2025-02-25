@@ -5,6 +5,7 @@ import ComponentA from "./components/ComponentA";
 import Box1 from "./components/Box1";
 import Box2 from "./components/Box2";
 import './App.css'
+import VerticalSplitter from "./components/VerticalSplitter";
 
 
 const App = () => {
@@ -19,11 +20,11 @@ const App = () => {
   // }
 
   return (
-    <div className="con">
-      <Box1></Box1> 
-      <Box2></Box2> 
-    </div>
-  )
+    <VerticalSplitter
+      leftComponent={<div>Left Side</div>}
+      rightComponent={<div>Right Side</div>}
+    />
+  );
 }
 
 export default App
