@@ -1,12 +1,3 @@
-const fs = require('fs');
+const test = require('./logger')
 
-// const files = fs.readdirSync('./');
-// console.log(files)
-
-fs.readdir('$', (err, files) => {
-    if (err) {
-        console.log("ERRORfff")
-    } else {
-        console.log({files})
-    }
-})
+console.log(test)

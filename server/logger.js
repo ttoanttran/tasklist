@@ -1,6 +1,6 @@
-const url = 'htrkor';
+const url = 'http:test/test';
 
-const log = (message) =>  {
+function log(message) {
   console.log(message);
 }
 

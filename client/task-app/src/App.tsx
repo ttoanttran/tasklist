@@ -9,21 +9,22 @@ import VerticalSplitter from "./components/VerticalSplitter";
 
 
 const App = () => {
-  // const [tasks, setTasks] = useState<string[]>([]);
+  const [tasks, setTasks] = useState<string[]>([]);
 
-  // const handleAdd = (item: string) => {
-  //   setTasks(prevtasks => [...prevtasks, item]);
-  // }
+  const handleAdd = (item: string) => {
+    setTasks(prevtasks => [...prevtasks, item]);
+  }
 
-  // const handleDelete = (item: string) => {
-  //   setTasks(tasks => tasks.filter(task => task !== item));
-  // }
+  const handleDelete = (item: string) => {
+    setTasks(tasks => tasks.filter(task => task !== item));
+  }
 
   return (
-    <VerticalSplitter
-      leftComponent={<div>Left Side</div>}
-      rightComponent={<div>Right Side</div>}
-    />
+    <div>
+      <h1 className="text-3xl font-bold underline">To Do List</h1>
+      <TaskForm handleSubmit={handleAdd}></TaskForm>
+      <TaskList things={tasks} handleDelete={handleDelete}></TaskList>
+    </div>
   );
 }
 
