@@ -1,8 +1,12 @@
-const express = require('express');
-const app = express();
+const fs = require('fs');
 
-app.get("/api", (req, res) => {
-    res.json({"users": ["userOne", "userTwo", "userThree"]});
-});
+// const files = fs.readdirSync('./');
+// console.log(files)
 
-app.listen(5000, () => console.log("Server is running on port 5000"))
+fs.readdir('$', (err, files) => {
+    if (err) {
+        console.log("ERRORfff")
+    } else {
+        console.log({files})
+    }
+})
