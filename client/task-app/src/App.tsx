@@ -1,8 +1,15 @@
 import React from 'react'
+import './App.css'
+import Counter from './components/Counter'
+import Todo from './components/Todo'
+import TestAPI from './components/TestAPI'
 
 const App = () => {
+
   return (
-    <div>App</div>
+    <div>
+        <TestAPI></TestAPI>
+    </div>
   )
 }
 
